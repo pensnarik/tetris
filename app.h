@@ -3,6 +3,7 @@
 
 struct SDL_Window;
 class Renderer;
+class Game;
 
 class App
 {
@@ -15,6 +16,7 @@ public:
 private:
     SDL_Window* gWindow;
     Renderer* gRenderer;
+    Game* gGame;
     const int SCREEN_WIDTH = 400;
     const int SCREEN_HEIGHT = 800;
 };
