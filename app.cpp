@@ -1,4 +1,5 @@
 #include "app.h"
+#include "game.h"
 #include "renderer.h"
 
 #include <SDL2/SDL.h>
@@ -62,6 +63,7 @@ void App::Run()
                 }
             }
             gRenderer->Clear();
+            gGame->Draw(*gRenderer);
             gRenderer->Present();
         }
     }

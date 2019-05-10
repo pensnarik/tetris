@@ -1,6 +1,8 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
+#include <stdint.h>
+
 struct SDL_Window;
 struct SDL_Renderer;
 
@@ -12,6 +14,8 @@ public:
 
     void Clear();
     void Present();
+    void DrawSolidRect(int x, int y, int w, int h, uint32_t rgba);
+    void DrawRect(int x, int y, int w, int h, uint32_t rgba);
 private:
     SDL_Renderer* gSdlRenderer;
 };
