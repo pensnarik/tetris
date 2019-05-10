@@ -1,6 +1,6 @@
 CC=g++
 TARGET=tetris
-CFLAGS=-I. `sdl-config --cflags` `pkg-config libpng --cflags` -ggdb -pedantic -Wall
+CFLAGS=-std=c++0x -I. `sdl2-config --cflags` `pkg-config libpng --cflags` -pedantic -Wall
 LDFLAGS=`sdl2-config --libs` `pkg-config libpng --libs` -lSDL2_image
 
 all: clean $(TARGET)
